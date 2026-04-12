@@ -1,6 +1,18 @@
 # Real-Time Vision Assist
 
-## Project Overview
+<p align="center">
+  <img src="https://img.icons8.com/color/96/artificial-intelligence.png" width="80"/>
+  <img src="https://img.icons8.com/color/96/camera.png" width="80"/>
+  <img src="https://img.icons8.com/color/96/speaker.png" width="80"/>
+</p>
+
+<p align="center">
+  <b>AI-powered assistive system for visually impaired individuals using Computer Vision and Speech Output</b>
+</p>
+
+---
+
+## 📌 Project Overview
 Real-Time Vision Assist is an AI-powered assistive system designed to help visually impaired individuals understand their surroundings through real-time audio feedback.
 
 This project has been developed as a **3rd Semester Mini Project for the Master of Computer Applications (MCA)**.
@@ -9,7 +21,7 @@ The system captures live video input, processes it using computer vision and dee
 
 ---
 
-## Objectives
+## 🎯 Objectives
 - Assist visually impaired individuals in identifying objects  
 - Provide real-time audio feedback using Text-to-Speech (TTS)  
 - Apply Artificial Intelligence and Computer Vision in real-world scenarios  
@@ -17,21 +29,30 @@ The system captures live video input, processes it using computer vision and dee
 
 ---
 
-## Technologies Used
-- Programming Language: Python  
-- Computer Vision: OpenCV  
-- Machine Learning: TensorFlow / CNN  
-- Text-to-Speech: gTTS / pyttsx3  
-- Libraries: NumPy, Pillow  
+## 🛠️ Technologies Used
+- **Programming Language:** Python  
+- **Computer Vision:** OpenCV  
+- **Machine Learning:** TensorFlow / CNN  
+- **Text-to-Speech:** gTTS / pyttsx3  
+- **Libraries:** NumPy, Pillow  
 
 ---
 
-## System Working
+## ⚙️ System Working
+
+<p align="center">
+  <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b" width="500"/>
+</p>
+
 1. Capture real-time video using a webcam  
 2. Process frames using a trained CNN model  
 3. Detect objects in the video stream  
-4. Generate descriptive output (e.g., "I can see a chair")  
-5. Convert text into speech output 
+4. Generate descriptive output (e.g., *"I can see a chair"*)  
+5. Convert text into speech output  
+
+---
+
+## 📁 Project Structure
 real-time-vision-assist/
 │
 ├── main.py
@@ -47,7 +68,7 @@ real-time-vision-assist/
 
 ---
 
-## Installation and Setup
+## 🚀 Installation and Setup
 
 ### Step 1: Clone the Repository
 
@@ -68,56 +89,54 @@ python main.py
 
 ---
 
-## Output Example
+## 📊 Output Example
 
 "I can see a chair"
 "I can see a person"
 
 ---
 
-## Advantages
+## ✅ Advantages
 - Improves independence for visually impaired users  
 - Provides real-time environmental awareness  
 - Simple, lightweight, and cost-effective solution  
 
 ---
 
-## Limitations
+## ⚠️ Limitations
 - Performance depends on lighting conditions  
 - Limited object detection categories  
 - Accuracy may vary in complex environments  
 
 ---
 
-## Future Enhancements
+## 🔮 Future Enhancements
 - Integration with mobile applications (Android/iOS)  
 - Implementation of advanced models like YOLO  
 - GPS-based navigation assistance  
 
 ---
 
-## Academic Details
-- Course: Master of Computer Applications (MCA)  
-- Semester: 3rd Semester  
-- Project Type: Mini Project  
-- Project Title: Real-Time Vision Assist  
+## 🎓 Academic Details
+- **Course:** Master of Computer Applications (MCA)  
+- **Semester:** 3rd Semester  
+- **Project Type:** Mini Project  
+- **Project Title:** Real-Time Vision Assist  
 
 ---
 
-## Contributors
+## 👥 Contributors
 - Nalini Srivastava  
 - Amarjit L Singh  
 
 ---
 
-## License
+## 📄 License
 This project is licensed under the MIT License.
 
 ---
 
-## Acknowledgement
+## 🙏 Acknowledgement
 This project was developed as part of MCA coursework and demonstrates the practical application of Artificial Intelligence and Computer Vision in solving real-world accessibility challenges.
 
 ---
-
-## Project Structure
