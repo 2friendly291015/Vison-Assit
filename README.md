@@ -31,7 +31,7 @@ The system captures live video input, processes it using computer vision and dee
 2. Process frames using a trained CNN model  
 3. Detect objects in the video stream  
 4. Generate descriptive output (e.g., "I can see a chair")  
-5. Convert text into speech output  
+5. Convert text into speech output 
 
 ---
 
