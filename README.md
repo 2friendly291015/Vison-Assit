@@ -134,12 +134,6 @@ python main.py
 
 ---
 
-## 👥 Contributors
-- Nalini Srivastava  
-- Amarjit L Singh  
-
----
-
 ## 📄 License
 This project is licensed under the MIT License.
 
