@@ -14,7 +14,7 @@
   <a href="https://realtime-vision-assit.netlify.app/">
     <img src="https://img.shields.io/badge/Live%20Demo-View%20Project-green?style=for-the-badge&logo=netlify"/>
   </a>
-  <a href="https://github.com/your-username/real-time-vision-assist">
+  <a href="https://github.com/2friendly291015/Vison-Assit">
     <img src="https://img.shields.io/badge/Source%20Code-GitHub-black?style=for-the-badge&logo=github"/>
   </a>
 </p>
@@ -81,7 +81,7 @@ real-time-vision-assist/
 
 ### Step 1: Clone the Repository
 
-git clone https://github.com/your-username/real-time-vision-assist.git
+git clone [https://github.com/2friendly291015/Vison-Assit](https://github.com/2friendly291015/Vison-Assit)
 
 cd real-time-vision-assist
 
