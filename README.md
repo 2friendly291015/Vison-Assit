@@ -10,6 +10,15 @@
   <b>AI-powered assistive system for visually impaired individuals using Computer Vision and Speech Output</b>
 </p>
 
+<p align="center">
+  <a href="https://realtime-vision-assit.netlify.app/">
+    <img src="https://img.shields.io/badge/Live%20Demo-View%20Project-green?style=for-the-badge&logo=netlify"/>
+  </a>
+  <a href="https://github.com/your-username/real-time-vision-assist">
+    <img src="https://img.shields.io/badge/Source%20Code-GitHub-black?style=for-the-badge&logo=github"/>
+  </a>
+</p>
+
 ---
 
 ## 📌 Project Overview
