@@ -1,145 +1,120 @@
-# Real-Time Vision Assist
+# Vision Assist: Real-Time AI Narration System
 
-<p align="center">
-  <img src="https://img.icons8.com/color/96/artificial-intelligence.png" width="80"/>
-  <img src="https://img.icons8.com/color/96/camera.png" width="80"/>
-  <img src="https://img.icons8.com/color/96/speaker.png" width="80"/>
-</p>
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Link-green?style=for-the-badge&logo=netlify)](https://realtime-vision-assit.netlify.app/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
+[![TensorFlow.js](https://img.shields.io/badge/TensorFlow.js-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/js)
 
-<p align="center">
-  <b>AI-powered assistive system for visually impaired individuals using Computer Vision and Speech Output</b>
-</p>
-
-<p align="center">
-  <a href="https://realtime-vision-assit.netlify.app/">
-    <img src="https://img.shields.io/badge/Live%20Demo-View%20Project-green?style=for-the-badge&logo=netlify"/>
-  </a>
-  <a href="https://github.com/2friendly291015/Vison-Assit">
-    <img src="https://img.shields.io/badge/Source%20Code-GitHub-black?style=for-the-badge&logo=github"/>
-  </a>
-</p>
+Vision Assist is a comprehensive real-time object detection and narration platform designed for visual accessibility. The system leverages both edge-based detection and cloud-scale analysis to provide low-latency environmental feedback.
 
 ---
 
-## 📌 Project Overview
-Real-Time Vision Assist is an AI-powered assistive system designed to help visually impaired individuals understand their surroundings through real-time audio feedback.
+## Technical Overview
 
-This project has been developed as a **3rd Semester Mini Project for the Master of Computer Applications (MCA)**.
+The application operates in two distinct modes to balance privacy, cost, and accuracy:
 
-The system captures live video input, processes it using computer vision and deep learning techniques, and converts detected objects into speech output.
-
----
-
-## 🎯 Objectives
-- Assist visually impaired individuals in identifying objects  
-- Provide real-time audio feedback using Text-to-Speech (TTS)  
-- Apply Artificial Intelligence and Computer Vision in real-world scenarios  
-- Develop a cost-effective and user-friendly assistive system  
+*   **On-Device Processing:** Utilizes TensorFlow.js (COCO-SSD) and the Web Speech API for local, private, and zero-cost detection.
+*   **Cloud Analysis:** Orchestrates a FastAPI backend using AWS Rekognition for high-resolution label detection and AWS Polly for natural voice synthesis.
 
 ---
 
-## 🛠️ Technologies Used
-- **Programming Language:** Python  
-- **Computer Vision:** OpenCV  
-- **Machine Learning:** TensorFlow / CNN  
-- **Text-to-Speech:** gTTS / pyttsx3  
-- **Libraries:** NumPy, Pillow  
+## Core Features
+
+*   **Real-Time Processing:** Low-latency object identification through optimized camera streams.
+*   **Intelligent Narration:** Context-aware speech feedback with deduplication logic.
+*   **Responsive UI:** Mobile-first design built with React and Tailwind CSS.
+*   **Hybrid Architecture:** Seamless switching between client-side and server-side processing.
 
 ---
 
-## ⚙️ System Working
+## System Architecture
 
-<p align="center">
-  <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b" width="500"/>
-</p>
-
-1. Capture real-time video using a webcam  
-2. Process frames using a trained CNN model  
-3. Detect objects in the video stream  
-4. Generate descriptive output (e.g., *"I can see a chair"*)  
-5. Convert text into speech output  
-
----
-
-## 📁 Project Structure
-real-time-vision-assist/
-│
-├── main.py
-├── requirements.txt
-├── model/
-├── utils/
-│ ├── detection.py
-│ └── speech.py
-├── assets/
-├── docs/
-└── README.md
-
+```mermaid
+graph TD
+    A[Camera Feed] --> B{Mode Selector}
+    B -->|Local| C[TensorFlow.js Engine]
+    B -->|Cloud| D[FastAPI Backend]
+    C --> E[Web Speech API]
+    D --> F[AWS Rekognition]
+    F --> G[AWS Polly]
+    G --> H[Frontend Audio]
+```
 
 ---
 
-## 🚀 Installation and Setup
+## Installation and Setup
 
-### Step 1: Clone the Repository
+### Frontend Environment
 
-git clone [https://github.com/2friendly291015/Vison-Assit](https://github.com/2friendly291015/Vison-Assit)
+1. Install project dependencies:
+    ```bash
+    npm install
+    ```
 
-cd real-time-vision-assist
+2. Launch the development server:
+    ```bash
+    npm run dev
+    ```
 
+### Backend Environment (AWS Mode)
 
-### Step 2: Install Dependencies
+1. Configure the virtual environment:
+    ```bash
+    cd backend
+    python -m venv .venv
+    # Windows
+    .\.venv\Scripts\activate
+    # Linux/macOS
+    source .venv/bin/activate
+    pip install -r requirements.txt
+    ```
 
-pip install -r requirements.txt
+2. Establish Configuration (`backend/.env`):
+    ```env
+    AWS_REGION=us-east-1
+    AWS_ACCESS_KEY_ID=your_access_key
+    AWS_SECRET_ACCESS_KEY=your_secret_key
+    POLLY_VOICE_ID=Joanna
+    ```
 
-
-### Step 3: Run the Application
-
-python main.py
-
-
----
-
-## 📊 Output Example
-
-"I can see a chair"
-"I can see a person"
-
----
-
-## ✅ Advantages
-- Improves independence for visually impaired users  
-- Provides real-time environmental awareness  
-- Simple, lightweight, and cost-effective solution  
-
----
-
-## ⚠️ Limitations
-- Performance depends on lighting conditions  
-- Limited object detection categories  
-- Accuracy may vary in complex environments  
-
----
-
-## 🔮 Future Enhancements
-- Integration with mobile applications (Android/iOS)  
-- Implementation of advanced models like YOLO  
-- GPS-based navigation assistance  
+3. Initialize the API:
+    ```bash
+    uvicorn main:app --reload --host 127.0.0.1 --port 8000
+    ```
 
 ---
 
-## 🎓 Academic Details
-- **Course:** Master of Computer Applications (MCA)  
-- **Semester:** 3rd Semester  
-- **Project Type:** Mini Project  
-- **Project Title:** Real-Time Vision Assist  
+## Deployment
+
+### Containerization
+
+The project is fully Docker-enabled for standardized deployment:
+
+```bash
+docker compose up --build
+```
+
+### Static Hosting
+
+The frontend is optimized for deployment on platforms like Netlify or Vercel.
+Live URL: [https://realtime-vision-assit.netlify.app/](https://realtime-vision-assit.netlify.app/)
 
 ---
 
-## 📄 License
-This project is licensed under the MIT License.
+## Development Stack
+
+*   **Interface:** React, Tailwind CSS, Lucide Icons, Shadcn UI
+*   **Backend:** FastAPI, Boto3, OpenCV
+*   **Intelligence:** TensorFlow.js, AWS Rekognition, AWS Polly
 
 ---
 
-## 🙏 Acknowledgement
-This project was developed as part of MCA coursework and demonstrates the practical application of Artificial Intelligence and Computer Vision in solving real-world accessibility challenges.
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
+
+Developed for Visual Accessibility Enhancement
